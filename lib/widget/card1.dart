@@ -30,7 +30,8 @@ class Card1 extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.price_change_outlined),
+                    Icon(Icons.price_change_outlined, color: Colors.white,),
+                    SizedBox(width: 5,),
                     "Current Prize".text.color(Colors.white).make()
                   ],
                 ),

@@ -1,3 +1,6 @@
+import 'package:assigment/screen/home_screen.dart';
+import 'package:assigment/screen/login_screen.dart';
+import 'package:assigment/screen/profile_screen.dart';
 import 'package:assigment/screen/signUp_screen.dart';
 import 'package:assigment/screen/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUpScreen()
+      home: WelcomeScreen()
     );
   }
 }

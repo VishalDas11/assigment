@@ -1,6 +1,9 @@
+import 'package:assigment/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:velocity_x/velocity_x.dart';
+
+import '../widget/textfield.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -70,7 +73,9 @@ class SignUpScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   "Already have account? ".text.size(16).make(),
-                  "Log In".text.bold.size(16).make()
+                  "Log In".text.bold.size(16).make().onTap(() {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+                  })
                 ],
               )
             ],
@@ -81,26 +86,3 @@ class SignUpScreen extends StatelessWidget {
   }
 }
 
-class textfield extends StatelessWidget {
-  const textfield({
-    Key? key, required this.hintText,this.icon,
-  }) : super(key: key);
-
-  final String hintText;
-  final Icon? icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      decoration: InputDecoration(
-        hintText: hintText,
-        filled: true,
-        fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10)
-        ),
-          suffixIcon: icon
-      ),
-    );
-  }
-}

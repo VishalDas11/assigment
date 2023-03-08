@@ -1,3 +1,5 @@
+import 'package:assigment/screen/login_screen.dart';
+import 'package:assigment/screen/signUp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -19,14 +21,18 @@ class WelcomeScreen extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
               )
             ),
-            onPressed: (){}, child: "Login".text.size(16).color(Colors.white).make(),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+            }, child: "Login".text.size(16).color(Colors.white).make(),
           ).pOnly(bottom: 40),
           "OR".text.size(16).make().pOnly(bottom: 40),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               "Already have an Account? ".text.size(16).make(),
-              "Sign Up".text.size(16).bold.make()
+              "Sign Up".text.size(16).bold.make().onTap(() {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpScreen()));
+              })
             ],
           )
         ],

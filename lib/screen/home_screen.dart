@@ -5,7 +5,7 @@ import '../widget/card1.dart';
 import '../widget/card2.dart';
 import '../widget/card3.dart';
 import '../widget/card4.dart';
-import '../widget/table.dart';
+import '../widget/drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,8 +17,12 @@ class HomeScreen extends StatelessWidget {
         title: "Top3 Prediction".text.bold.color(Colors.orange).make(),
         centerTitle: true,
         backgroundColor: Colors.white,
-        leading: Icon(Icons.menu, color: Colors.black,),
-        actions: [
+        leading: InkWell(
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> Mydrawer()));
+          },
+            child: Icon(Icons.menu, color: Colors.black,)),
+        actions: const [
 
           Icon(Icons.notification_add_outlined, color: Colors.black,),
           SizedBox(width: 10,),
@@ -31,24 +35,24 @@ class HomeScreen extends StatelessWidget {
           children: [
 
             // TODO  First Container
-           Card1(),
+           const Card1(),
 
             // TODO  Second Container
-           Card2(),
+           const Card2(),
 
             // TODO Third Container
-            Card3().pOnly(bottom: 30),
+            const Card3().pOnly(bottom: 30),
 
-            Card4().pOnly(bottom: 30),
+            const Card4().pOnly(bottom: 30),
             "Sponser".text.bold.size(22).make().centered(),
-            SizedBox(height: 40,),
+            const SizedBox(height: 20,),
 
-            HomeTile(btnColor: Colors.orange, textColor: Colors.black,),
-            HomeTile(btnColor: Colors.red, textColor: Colors.white,),
-            HomeTile(btnColor: Colors.orange, textColor: Colors.black,),
-            HomeTile(btnColor: Colors.red, textColor: Colors.white,),
-            HomeTile(btnColor: Colors.orange, textColor: Colors.black,),
-            HomeTile(btnColor: Colors.red, textColor: Colors.white,),
+            const HomeTile(btnColor: Colors.orange, textColor: Colors.black,),
+            const HomeTile(btnColor: Colors.red, textColor: Colors.white,),
+            const HomeTile(btnColor: Colors.orange, textColor: Colors.black,),
+            const HomeTile(btnColor: Colors.red, textColor: Colors.white,),
+            const HomeTile(btnColor: Colors.orange, textColor: Colors.black,),
+            const HomeTile(btnColor: Colors.red, textColor: Colors.white,),
 
 
           ],
