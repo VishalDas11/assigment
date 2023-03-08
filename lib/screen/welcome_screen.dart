@@ -11,7 +11,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          "Top 3 Prediction".text.size(24).bold.make().centered().pOnly(bottom: 240),
+          "Top 3 Prediction".text.size(24).bold.make().centered().pOnly(bottom: 180),
           "Predict the Champion and Runner-app of the World Cup 2022 and Win The Prize".text.bold.size(28).make().pOnly(bottom: 100),
           ElevatedButton(
             style: ButtonStyle(
